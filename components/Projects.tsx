@@ -10,6 +10,11 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Tooltip from '@mui/material/Tooltip';
 
+interface Image {
+  src: string;
+  alt: string;
+}
+
 const projects = [
   {
     title: "Catering Management Web App",
@@ -64,9 +69,9 @@ const projects = [
 
 const Projects: React.FC = () => {
   const [open, setOpen] = useState(false);
-  const [selectedImages, setSelectedImages] = useState([]);
+  const [selectedImages, setSelectedImages] = useState<Image[]>([]);
 
-  const handleClickOpen = (images) => {
+  const handleClickOpen = (images: Image[]) => {
     setSelectedImages(images);
     setOpen(true);
   };
@@ -75,6 +80,7 @@ const Projects: React.FC = () => {
     setOpen(false);
     setSelectedImages([]);
   };
+
 
   return (
     <div id="projects" className="bg-gray-900 text-gray-100 py-20 px-5 lg:px-20">
