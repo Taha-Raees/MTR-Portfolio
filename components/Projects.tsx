@@ -8,6 +8,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
+import Tooltip from '@mui/material/Tooltip';
 
 const projects = [
   {
@@ -111,9 +112,14 @@ const Projects: React.FC = () => {
                 </a>
               </div>
             </div>
-            <div className="lg:w-1/2 cursor-pointer" onClick={() => handleClickOpen(project.images)}>
-              <Carousel images={project.images} />
-            </div>
+            <Tooltip title="Click to view full size" arrow>
+              <div
+                className="lg:w-1/2 cursor-pointer relative"
+                onClick={() => handleClickOpen(project.images)}
+              >
+                <Carousel images={project.images} />
+              </div>
+            </Tooltip>
           </div>
         ))}
       </div>
@@ -133,7 +139,7 @@ const Projects: React.FC = () => {
             <CloseIcon />
           </IconButton>
         </DialogTitle>
-        <DialogContent style={{ height: '80vh' }}>
+        <DialogContent  className="custom-scroll" style={{ height: 'auto', width:'75vw', }}>
           <Carousel images={selectedImages} />
         </DialogContent>
       </Dialog>
@@ -142,4 +148,3 @@ const Projects: React.FC = () => {
 };
 
 export default Projects;
-
