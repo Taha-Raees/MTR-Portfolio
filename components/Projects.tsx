@@ -79,11 +79,12 @@ const Projects: React.FC = () => {
                 <a href={project.site} target="_blank" rel="noopener noreferrer">
                   <LanguageIcon fontSize="large" />
                 </a>
-              </div>
+              </div><hr />
             </div>
             <div className="lg:w-1/2">
               <Carousel images={project.images} />
             </div>
+            
           </div>
         ))}
       </div>

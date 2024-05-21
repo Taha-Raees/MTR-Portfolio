@@ -1,3 +1,4 @@
+import Education from "@/components/Education";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Image from "next/image";
@@ -7,6 +8,7 @@ export default function Home() {
     <div>
       <Hero/>
       <Projects/>
+      <Education/>
     </div>
   );
 }
