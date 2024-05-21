@@ -5,7 +5,7 @@ import LanguageIcon from '@mui/icons-material/Language';
 const projects = [
   {
     title: "Catering Management Web App",
-    description: "Developed a centralized platform for managing a food catering service on food trucks, encompassing event scheduling, inventory management, staff coordination, and an integrated POS system for financial oversight. The app streamlined operational processes, improved efficiency, and enhanced data-driven decision-making.",
+    description: "Developed a centralized platform for managing a food catering service on food trucks, encompassing event scheduling, inventory management, staff coordination, and an integrated POS system for financial oversight. The app streamlined operational processes, improved efficiency, and enhanced data-driven decision-making.(Login: taharaees, Password: 0343)",
     stack: [ "Nextjs", "Node.js", "Express", "postgreSQL", "Prisma", "AWS","Material UI","Tauri","Capacitor"],
     github: "https://github.com/Taha-Raees/FB-System",
     site: "https://fb-system.vercel.app/",
