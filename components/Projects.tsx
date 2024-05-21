@@ -129,6 +129,7 @@ const Projects: React.FC = () => {
           </div>
         ))}
       </div>
+      <hr />
       <Dialog open={open} onClose={handleClose} maxWidth="lg" fullWidth>
         <DialogTitle>
           Project Images
