@@ -26,7 +26,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, interval = 3000 }) => {
   };
 
   return (
-    <div className="relative w-full h-96 md:h-96 overflow-hidden">
+    <div className="relative w-full h-full overflow-hidden">
       <div className="absolute inset-0 flex justify-between items-center z-10">
         <button
           onClick={prevSlide}

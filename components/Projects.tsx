@@ -1,6 +1,13 @@
+"use client"
+import React, { useState } from 'react';
 import Carousel from './Carousel';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 
 const projects = [
   {
@@ -55,6 +62,19 @@ const projects = [
 ];
 
 const Projects: React.FC = () => {
+  const [open, setOpen] = useState(false);
+  const [selectedImages, setSelectedImages] = useState([]);
+
+  const handleClickOpen = (images) => {
+    setSelectedImages(images);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setSelectedImages([]);
+  };
+
   return (
     <div id="projects" className="bg-gray-900 text-gray-100 py-20 px-5 lg:px-20">
       <div className="container mx-auto">
@@ -73,35 +93,53 @@ const Projects: React.FC = () => {
                 ))}
               </ul>
               <div className="flex space-x-4 mb-3">
-              <a
-    href={project.github}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-gray-500 transition-colors duration-200"
-  >
-    <GitHubIcon fontSize="large" />
-  </a>
-  <a
-    href={project.site}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-gray-500 transition-colors duration-200"
-  >
-    <LanguageIcon fontSize="large" />
-  </a>
-</div>
-
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-500 transition-colors duration-200"
+                >
+                  <GitHubIcon fontSize="large" />
+                </a>
+                <a
+                  href={project.site}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-500 transition-colors duration-200"
+                >
+                  <LanguageIcon fontSize="large" />
+                </a>
+              </div>
             </div>
-            <div className="lg:w-1/2">
+            <div className="lg:w-1/2 cursor-pointer" onClick={() => handleClickOpen(project.images)}>
               <Carousel images={project.images} />
             </div>
           </div>
-         
         ))}
       </div>
-    <hr />
+      <Dialog open={open} onClose={handleClose} maxWidth="lg" fullWidth>
+        <DialogTitle>
+          Project Images
+          <IconButton
+            aria-label="close"
+            onClick={handleClose}
+            style={{
+              position: 'absolute',
+              right: 8,
+              top: 8,
+              color: '#000',
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+        </DialogTitle>
+        <DialogContent style={{ height: '80vh' }}>
+          <Carousel images={selectedImages} />
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
 
 export default Projects;
+
