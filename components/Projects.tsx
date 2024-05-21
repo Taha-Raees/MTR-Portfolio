@@ -73,13 +73,24 @@ const Projects: React.FC = () => {
                 ))}
               </ul>
               <div className="flex space-x-4 mb-3">
-                <a href={project.github} target="_blank" rel="noopener noreferrer">
-                  <GitHubIcon fontSize="large" />
-                </a>
-                <a href={project.site} target="_blank" rel="noopener noreferrer">
-                  <LanguageIcon fontSize="large" />
-                </a>
-              </div>
+              <a
+    href={project.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-gray-500 transition-colors duration-200"
+  >
+    <GitHubIcon fontSize="large" />
+  </a>
+  <a
+    href={project.site}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-gray-500 transition-colors duration-200"
+  >
+    <LanguageIcon fontSize="large" />
+  </a>
+</div>
+
             </div>
             <div className="lg:w-1/2">
               <Carousel images={project.images} />

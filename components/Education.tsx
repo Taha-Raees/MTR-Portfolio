@@ -3,7 +3,7 @@ const Education = () => {
       <div className="bg-gray-100 text-gray-900 py-20 px-5 lg:px-20">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold mb-10 text-center">Education</h2>
-          <div className="mb-10 border border-gray-300 p-5 rounded-md shadow-lg">
+          <div className="mb-10  border border-gray-300 p-5 rounded-md shadow-lg">
             <h3 className="text-2xl font-semibold mb-3">Mechanical Engineering B.Sc</h3>
             <p className="text-lg mb-5">Hochschule Rhein Waal Kleve (Oct 2017 — Present)</p>
             <ul className="list-disc list-inside mb-5">
