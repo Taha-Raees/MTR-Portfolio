@@ -1,6 +1,5 @@
 "use client"
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 
 interface CarouselProps {
   images: { src: string; alt: string }[];
@@ -43,10 +42,11 @@ const Carousel: React.FC<CarouselProps> = ({ images, interval = 3000 }) => {
       <div className="flex transition-transform duration-500 ease-in-out"
            style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {images.map((image, index) => (
-          <div key={index} className="w-full flex-shrink-0 relative h-full">
+          <div key={index} className="w-full flex-shrink-0 relative h-full p-2">
             <img
               src={image.src}
               alt={image.alt}
+              className="w-full h-full object-cover rounded-lg border-2"
             />
           </div>
         ))}

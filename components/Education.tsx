@@ -1,9 +1,9 @@
 const Education = () => {
     return (
-      <div className="bg-white text-gray-900 py-20 px-5 lg:px-20">
+      <div className="bg-gray-100 text-gray-900 py-20 px-5 lg:px-20">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold mb-10 text-center">Education</h2>
-          <div className="mb-10">
+          <div className="mb-10 border border-gray-300 p-5 rounded-md shadow-lg">
             <h3 className="text-2xl font-semibold mb-3">Mechanical Engineering B.Sc</h3>
             <p className="text-lg mb-5">Hochschule Rhein Waal Kleve (Oct 2017 — Present)</p>
             <ul className="list-disc list-inside mb-5">
@@ -12,12 +12,9 @@ const Education = () => {
               <li>Leveraged creativity in problem-solving to address and overcome multifaceted challenges, showcasing a proactive approach to finding solutions.</li>
             </ul>
           </div>
-          <div className="mb-10">
+          <div className="mb-10 border border-gray-300 p-5 rounded-md shadow-lg">
             <h3 className="text-2xl font-semibold mb-3">Meta Front-End Developer Professional Certificate</h3>
             <p className="text-lg mb-5">Coursera Online (Dec 2022 — Mar 2023)</p>
-            <p className="text-lg mb-5">
-              During the Meta Front-End Developer Professional Certificate, I gained a comprehensive understanding of front-end development, encompassing key aspects of web development and design. My learning journey included:
-            </p>
             <ul className="list-disc list-inside mb-5">
               <li>Distinguished between front-end, back-end, and full-stack development roles.</li>
               <li>Created and styled web pages using HTML and CSS, and utilized UI frameworks.</li>
@@ -29,7 +26,7 @@ const Education = () => {
               <li>Described fundamentals of UX design, considered accessibility, developed user empathy, and created wireframes and prototypes in Figma.</li>
             </ul>
           </div>
-          <div>
+          <div className="mb-10 border border-gray-300 p-5 rounded-md shadow-lg" >
             <h3 className="text-2xl font-semibold mb-3">IBM Applied DevOps Engineering</h3>
             <p className="text-lg mb-5">Coursera Online (Jan 2024 — Present)</p>
             <ul className="list-disc list-inside mb-5">

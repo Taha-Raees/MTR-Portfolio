@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <div>
       <Hero/>
-      <Projects/>
       <Education/>
+      <Projects/>
     </div>
   );
 }

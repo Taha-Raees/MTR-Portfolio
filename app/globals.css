@@ -7,3 +7,16 @@ body,
 :root {
   height: 100%;
 }
+html {
+  scroll-behavior: smooth;
+}
+/* Add this to your global CSS file, e.g., styles/globals.css */
+html, body {
+  overflow: -moz-scrollbars-none; 
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}
