@@ -36,6 +36,10 @@ const projects = [
       { src: "/images/project1-11.png", alt: "Catering Management Web App Screenshot 11" },
       { src: "/images/project1-12.png", alt: "Catering Management Web App Screenshot 12" },
       { src: "/images/project1-13.png", alt: "Catering Management Web App Screenshot 13" },
+      { src: "/images/project1-14.png", alt: "Catering Management Web App Screenshot 14" },
+      { src: "/images/project1-15.png", alt: "Catering Management Web App Screenshot 15" },
+      { src: "/images/project1-16.png", alt: "Catering Management Web App Screenshot 16" },
+      
     ],
   },
   {
