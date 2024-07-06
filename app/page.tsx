@@ -1,4 +1,4 @@
-// src/pages/Home.js
+// app/page.tsx
 "use client"
 import { useEffect } from 'react';
 import Education from "@/components/Education";
@@ -10,7 +10,7 @@ import * as gtag from '../lib/gtag';
 
 export default function Home() {
   useEffect(() => {
-    const handleRouteChange = (url) => {
+    const handleRouteChange = (url: string) => {
       gtag.pageview(url);
     };
 
